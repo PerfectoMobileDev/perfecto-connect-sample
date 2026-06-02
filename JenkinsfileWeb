@@ -19,7 +19,7 @@ pipeline{
         }
         stage('SCM CHECKOUT') {
             steps{
-                git branch: 'master', url: 'git@github.com:PerfectoMobileDev/perfecto-connect-sample.git';
+                git branch: 'master', credentialsId: 'perfecto-jenkins-ci', url: 'https://github.com/PerfectoMobileDev/perfecto-connect-sample.git';
             }
         }
         stage('Download Perfecto Connect'){
